@@ -1,10 +1,12 @@
 import type { NextPage } from "next";
 import { IIndexPageProps } from "../ts-types/componentTypes";
-import { useRef, useEffect, useState, useCallback } from "react";
-import Todos from "../components/AddTodo";
-
+import Navbar from "../components/Navbar";
 const Home: NextPage<IIndexPageProps> = () => {
-  return <>this is working</>;
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 };
 
 export default Home;

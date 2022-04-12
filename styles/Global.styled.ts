@@ -15,6 +15,8 @@ const GlobalStyle = createGlobalStyle<IStyle>`
 
 body {
     font-size: 16px;
+    color: #033843;
+    background: #f4f7f5;
 }
 
 h1,
@@ -79,6 +81,32 @@ h1,
     @media (min-width: 1024px) {
       font-size: 1.2rem;
     }
+  }
+
+  @keyframes slide-in {
+    from {
+      transform: translate(-100%, -100%);
+
+    }
+
+    to {
+      transform: translate(0%, 0%);
+
+    }
+  }
+
+  @keyframes slide-out {
+    from {
+      transform: translate(0%, 0%);
+
+    }
+
+    to {
+      transform: translate(-100%, -100%);
+
+    }
+
+
   }
 `;
 

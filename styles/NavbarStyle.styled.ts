@@ -2,45 +2,51 @@ import styled from "styled-components";
 import { INavbarStyle } from "../ts-types/styleTypes";
 
 export const NavbarStyle = styled.nav<INavbarStyle>`
-padding: 1rem;
-background: yellow;
+  position: relative;
+  .logo__wrapper {
+    display: flex;
+    justify-content: space-between;
+    background: #033843;
+    padding: 1rem;
+    z-index: 1;
 
-.logo__wrapper {
-  display: flex;
-  justify-content: space-between;
-
-  button {
-    background: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 0.2rem;
-    line-height: 100%;
-    background-color: gray;
-    border-radius: 50%;
-
-    img {
-      width: 30px;
-      height: auto;
+    button {
+      position: relative;
+      background: transparent;
+      padding: 0.2rem;
+      z-index: 1;
+      border: 1px inset transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      outline: none;
+      cursor: pointer;
+      line-height: 100%;
+      background-color: #c15a39;
+      border-radius: 50%;
     }
   }
-}
-ul {
-  list-style-type: none;
-  background: yellow;
+  ul {
+    list-style-type: none;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    animation: slide-out 0s 1 forwards;
+    background: #033843;
+    padding: 1rem;
 
-  li {
-    transform: translate(-100%, -100%);
-    @include transition;
+    li {
+      position: relative;
+      padding: 1rem 0.5rem;
+      text-align: center;
+      color: #f4f7f5;
+      cursor: pointer;
+      transition: color 0.2s ease-out;
+      transform: translate(-100%, -100%);
+
+      &:hover {
+        color: gray;
+      }
+    }
   }
-}
-}
-
-@keyframes slide-in {
-from {
-  transform: translate(-100%, -100%);
-}
-
-to {
-  transform: translate(0%, 0%);
-}`;
+`;
