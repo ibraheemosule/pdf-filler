@@ -1,7 +1,7 @@
 import hamburger from "../public/images/menu-outline.svg";
 import closeIcon from "../public/images/close-outline.svg";
 import { NavbarStyle } from "../styles/NavbarStyle.styled";
-import { Container } from "../styles/Container.styled";
+import { ContainerStyle } from "../styles/ContainerStyle.styled";
 import { useState, useRef, useCallback, useEffect } from "react";
 import Image from "next/image";
 
@@ -34,29 +34,31 @@ const Navbar: React.FC<NavbarProps> = () => {
   }, [toggle]);
 
   return (
-    <section>
-      <NavbarStyle>
-        <div className="logo__wrapper">
-          <button onClick={toggleNav}>
-            <Image
-              src={toggle ? hamburger : closeIcon}
-              height={30}
-              width={30}
-              alt="menu"
-            />
-          </button>
-          <button onClick={toggleNav}>
-            <Image src={hamburger} height={30} width={30} alt="menu" />
-          </button>
-        </div>
-        <ul className="animate" ref={ul}>
-          <li className="nav_item">Pdf to Docx</li>
-          <li className="nav_item">Docx to Pdf</li>
-          <li className="nav_item">Pdf Filler</li>
-          <li className="nav_item">Create Pdf</li>
-        </ul>
-      </NavbarStyle>
-    </section>
+    <NavbarStyle>
+      <ContainerStyle>
+        <nav>
+          <div className="logo__wrapper">
+            <button onClick={toggleNav} className="menu__button">
+              <Image
+                src={toggle ? hamburger : closeIcon}
+                height={30}
+                width={30}
+                alt="menu icon"
+              />
+            </button>
+            <button>
+              <Image src={hamburger} height={30} width={30} alt="menu" />
+            </button>
+          </div>
+          <ul className="animate" ref={ul}>
+            <li className="nav_item">pdf to docx</li>
+            <li className="nav_item">docx to pdf</li>
+            <li className="nav_item">pdf filler</li>
+            <li className="nav_item">create pdf</li>
+          </ul>
+        </nav>
+      </ContainerStyle>
+    </NavbarStyle>
   );
 };
 

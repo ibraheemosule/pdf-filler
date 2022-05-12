@@ -1,11 +1,13 @@
 import type { NextPage } from "next";
 import { IIndexPageProps } from "../ts-types/componentTypes";
-import Navbar from "../components/Navbar";
+import { HomeStyle } from "../styles/HomeStyle.styled";
+import ConvertFile from "../components/convert-file";
+
 const Home: NextPage<IIndexPageProps> = () => {
   return (
-    <>
-      <Navbar />
-    </>
+    <HomeStyle>
+      <ConvertFile />
+    </HomeStyle>
   );
 };
 
