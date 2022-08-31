@@ -1,8 +1,13 @@
-import styled from "styled-components";
-import { INavbarStyle } from "../ts-types/styleTypes";
+import styled from 'styled-components';
+import { INavbarStyle } from '../ts-types/styleTypes';
 
 export const NavbarStyle = styled.section<INavbarStyle>`
   background: #033843;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
 
   nav {
     position: relative;

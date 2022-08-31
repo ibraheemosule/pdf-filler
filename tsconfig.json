@@ -16,6 +16,6 @@
     "incremental": true,
     "downlevelIteration": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "ssr-server.js"],
   "exclude": ["node_modules"]
 }

@@ -8,6 +8,6 @@ export interface IAllProjectsProps {}
 
 export interface IIndexPageProps {}
 
-export interface INavProps {}
+export interface INavbarProps {}
 
 export interface IConvertFile {}

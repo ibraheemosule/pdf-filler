@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components";
-import { IStyle } from "../ts-types/styleTypes";
+import { createGlobalStyle } from 'styled-components';
+import { IStyle } from '../ts-types/styleTypes';
 
 const GlobalStyle = createGlobalStyle<IStyle>`
 *, *:before, *:after {
